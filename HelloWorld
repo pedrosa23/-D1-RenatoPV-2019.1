@@ -1,0 +1,40 @@
+package aula6;
+
+import java.util.Date;
+//import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+public class HelloWorld {
+	private String nome;
+	public void setNome(String nome) {
+		this.nome=nome;
+	}
+	public String getNome() {
+		return this.nome;
+	}
+	public void imprimir() {
+		Date data = new Date();
+		SimpleDateFormat formatar = new SimpleDateFormat("hh:mm:ss");
+		String dataFormatada = formatar.format(data);
+		System.out.println(dataFormatada + this.getNome()+"Você acobou de fazer o seu primeiro Hello World em Java.Parabens!");
+	}
+	
+	public static void main(String args[]) {
+	HelloWorld hello1 = new HelloWorld();
+	
+	hello1.setNome("-Ola Gabriel.");
+	hello1.imprimir();
+	
+	HelloWorld  hello2 = new HelloWorld();
+	hello2.setNome("-Ola Ana.");
+	hello2.imprimir();
+	
+	HelloWorld  hello3 = new HelloWorld();
+	hello3.setNome("-Ola JAVA EE VS.SPRING.");
+	hello3.imprimir();
+	HelloWorld  hello4 = new HelloWorld();
+		
+	 }
+
+}
+
